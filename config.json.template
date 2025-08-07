@@ -1,0 +1,7 @@
+{
+  "o3_api_key": "请填入您的O3 API密钥",
+  "o3_base_url": "https://api.o3.fan/v1",
+  "o3_model": "claude-sonnet-4-20250514",
+  "mineru_api_key": "请填入您的MinerU API密钥",
+  "mineru_base_url": "https://api.mineru.com"
+}
