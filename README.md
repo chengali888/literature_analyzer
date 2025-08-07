@@ -60,11 +60,35 @@ python run_agent.py demo
 ## 📦 安装和配置
 
 ### 1. 环境要求
-- Python 3.7+
-- tkinter (图形界面)
-- requests, openai (API调用)
+- **Python 3.7+** (推荐 3.8+)
+- **操作系统**: Windows, macOS, Linux
 
-### 2. API配置
+### 2. 依赖安装
+
+#### 方法一：一键安装 (推荐)
+```bash
+pip install -r requirements.txt
+```
+
+#### 方法二：手动安装核心依赖
+```bash
+# 必须的核心依赖
+pip install requests>=2.25.1 openai>=1.0.0 tqdm>=4.62.0 python-dotenv>=0.19.0
+
+# Web界面 (推荐)
+pip install gradio>=4.0.0
+```
+
+#### 依赖说明
+- **requests**: HTTP请求库，用于API调用
+- **openai**: OpenAI API客户端，兼容O3.fan平台
+- **tqdm**: 进度条显示
+- **python-dotenv**: 环境变量管理  
+- **gradio**: 现代Web界面框架 (推荐安装)
+
+> 📝 **注意**: tkinter、json、pathlib等为Python标准库，通常无需额外安装
+
+### 3. API配置
 
 ⚠️ **重要说明**: 本项目使用的是 **O3.fan平台的Claude Sonnet 4模型**，不是OpenAI的O3模型。
 
@@ -105,20 +129,61 @@ export MINERU_API_KEY="您的MinerU_API密钥"
 python config.py status
 ```
 
-### 3. 快速开始
-```bash
-# 安装Gradio获得最佳界面体验
-pip install gradio>=4.0.0
+### 4. 完整安装步骤
 
-# 启动现代化Web界面
+#### 步骤 1: 克隆项目
+```bash
+git clone https://github.com/chengali888/literature_analyzer.git
+cd literature_analyzer
+```
+
+#### 步骤 2: 安装依赖
+```bash
+pip install -r requirements.txt
+```
+
+#### 步骤 3: 配置API密钥
+```bash
+python config.py setup
+```
+按提示输入您的O3和MinerU API密钥
+
+#### 步骤 4: 启动应用
+```bash
+# 现代化Web界面 (推荐)
 python run_gradio.py
 
 # 或使用通用启动器
 python run_agent.py gui
 
-# 运行演示
+# 命令行界面
+python run_agent.py cli
+
+# 演示模式
 python run_agent.py demo
 ```
+
+### 5. 故障排除
+
+#### 常见问题解决
+1. **导入错误**: 确保已安装所有依赖
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+2. **API密钥错误**: 检查配置
+   ```bash
+   python config.py status
+   ```
+
+3. **tkinter错误** (Linux用户):
+   ```bash
+   # Ubuntu/Debian
+   sudo apt-get install python3-tk
+   
+   # CentOS/RHEL
+   sudo yum install tkinter
+   ```
 
 ## 🔧 详细使用方法
 
