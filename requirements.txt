@@ -1,30 +1,42 @@
 # 文献处理Agent依赖项
 # Literature Processing Agent Dependencies
 
-# 核心依赖 (Core Dependencies)
+# ==========================================
+# 核心依赖 (Core Dependencies) - 必须安装
+# ==========================================
 requests>=2.25.1      # HTTP请求库，用于API调用
-openai>=1.0.0         # OpenAI API客户端
-pathlib              # 路径处理 (Python 3.4+内置)
-
-# 可选依赖 (Optional Dependencies)
+openai>=1.0.0         # OpenAI API客户端，兼容O3.fan平台
 tqdm>=4.62.0          # 进度条显示
 python-dotenv>=0.19.0 # 环境变量管理
 
-# GUI界面依赖 (GUI Dependencies)
-gradio>=4.0.0         # 现代Web界面框架
-# tkinter - Python标准库，通常已预装 (旧版GUI备用)
+# ==========================================  
+# GUI界面依赖 (GUI Dependencies) - 推荐安装
+# ==========================================
+gradio>=4.0.0         # 现代Web界面框架 (推荐)
 
-# 数据处理依赖 (Data Processing Dependencies)  
-json                  # JSON处理 (Python内置)
-base64                # Base64编码 (Python内置)
-time                  # 时间处理 (Python内置)
-os                    # 操作系统接口 (Python内置)
-sys                   # 系统参数和函数 (Python内置)
-threading             # 多线程 (Python内置)
-zipfile               # ZIP文件处理 (Python内置)
-datetime              # 日期时间 (Python内置)
+# ==========================================
+# Python内置库 (Built-in Libraries) - 无需安装
+# ==========================================
+# 以下库为Python标准库，无需额外安装：
+# - json (JSON处理)
+# - base64 (Base64编码)
+# - time (时间处理)
+# - os (操作系统接口)
+# - sys (系统参数和函数)
+# - threading (多线程)
+# - zipfile (ZIP文件处理) 
+# - datetime (日期时间)
+# - pathlib (路径处理, Python 3.4+)
+# - tkinter (图形界面, Python 3.7+通常预装)
+# - argparse (命令行参数解析)
+# - shutil (高级文件操作)
+# - tempfile (临时文件处理)
+# - webbrowser (浏览器操作)
+# - typing (类型提示)
 
-# 开发和测试依赖 (Development Dependencies)
+# ==========================================
+# 开发和测试依赖 (Development Dependencies) - 可选
+# ==========================================
 # pytest>=6.0.0      # 单元测试框架
 # black>=21.0.0       # 代码格式化
 # flake8>=3.9.0       # 代码检查
